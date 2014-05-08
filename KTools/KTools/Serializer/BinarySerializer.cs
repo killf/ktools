@@ -24,7 +24,7 @@ namespace KTools.Serializer
                 if (handler != null) handler(e);
             }
         }
-        public static T DeSerialize<T>(string filePath,ExceptionHandler handler)
+        public static T DeSerialize<T>(string filePath,ExceptionHandler handler=null)
         {
             try
             {
