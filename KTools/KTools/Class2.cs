@@ -7,5 +7,6 @@ namespace KTools
 {
     public class Class1
     {
+//HI
     }
 }
