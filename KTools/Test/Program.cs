@@ -10,22 +10,28 @@ namespace Test
         static void Main(string[] args)
         {
             var ls = new List<string>();
+            var l = new List<string>();
             ls.Add("Hello world!!!");
 
-           // KTools.Serializer.XMLSerializer.Serialize<List<string>>(ls, "d:/1.txt");
-           //var l= KTools.Serializer.XMLSerializer.DeSerialize<List<string>>("d:/1.txt");
+            KTools.Serializer.XMLSerializer.Serialize<List<string>>(ls, "xml.txt", (e) => { Console.WriteLine("错误：" + e.ToString()); });
+            l = KTools.Serializer.XMLSerializer.DeSerialize<List<string>>("xml.txt", (e) => { Console.WriteLine("错误：" + e.ToString()); });
+            Console.WriteLine("XML序列化：" + l[0]);
 
-            //var str = "Hello world!!!";
-            //KTools.Serializer.SoapSerializer.Serialize<string>(str, "d:/2.dat", (e) => { Console.WriteLine("错误："+e.ToString()); });
-            //var l = KTools.Serializer.SoapSerializer.DeSerialize<string>("d:/2.dat");
+            var str = "Hello world!!!";
+            KTools.Serializer.SoapSerializer.Serialize<string>(str, "soap.txt", (e) => { Console.WriteLine("错误：" + e.ToString()); });
+            var s = KTools.Serializer.SoapSerializer.DeSerialize<string>("soap.txt");
+            Console.WriteLine("Soap序列化：" + s);
 
-            //KTools.Serializer.BinarySerializer.Serialize<List<string>>(ls, "d:/3.dat");
-            //var l= KTools.Serializer.BinarySerializer.DeSerialize<List<string>>("d:/3.dat");
+            KTools.Serializer.BinarySerializer.Serialize<List<string>>(ls, "Binary.dat");
+            l = KTools.Serializer.BinarySerializer.DeSerialize<List<string>>("Binary.dat");
+            Console.WriteLine("Binary序列化：" + l[0]);
 
-            KTools.Serializer.JsonSerializer.Serialize<List<string>>(ls, "d:/4.txt");
-            var l = KTools.Serializer.JsonSerializer.DeSerialize<List<string>>("d:/4.txt");
+            KTools.Serializer.JsonSerializer.Serialize<List<string>>(ls, "Json.txt");
+            l = KTools.Serializer.JsonSerializer.DeSerialize<List<string>>("Json.txt");
+            Console.WriteLine("Json序列化：" + l[0]);
 
-            Console.WriteLine(l[0]);
+            Console.WriteLine("测试完毕");
+            Console.WriteLine("注：如果显示 Hello world!!! 表示成功！");
             Console.ReadLine();
         }
     }
