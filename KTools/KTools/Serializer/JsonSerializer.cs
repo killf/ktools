@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace KTools
+namespace KTools.Serializer
 {
-    public partial class Serializer
+    public  class Serializer
     {
 
     }

@@ -9,7 +9,7 @@ namespace KTools.Serializer
 {
     public class XMLSerializer
     {
-        delegate void ExceptionHandler(Exception e); 
+        public  delegate void ExceptionHandler(Exception e); 
         public static void Serialize<T>(T o, string filePath,ExceptionHandler handler=null)
         {
             try

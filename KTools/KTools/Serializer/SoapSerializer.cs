@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.IO;
-namespace KTools
+namespace KTools.Serializer
 {
     public class SoapSerializer
     {
-        delegate void ExceptionHandler(Exception e);
+       public  delegate void ExceptionHandler(Exception e);
         public static void Serialize<T>(T o, string filePath,ExceptionHandler handler=null)
         {
             try
