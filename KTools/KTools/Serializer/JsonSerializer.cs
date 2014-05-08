@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KTools
 {
-    public class Class1
+    public partial class Serializer
     {
 
     }
