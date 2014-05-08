@@ -13,6 +13,8 @@ namespace Test
             var l = new List<string>();
             ls.Add("Hello world!!!");
 
+            Console.Title = "序列化测试";
+
             KTools.Serializer.XMLSerializer.Serialize<List<string>>(ls, "xml.txt", (e) => { Console.WriteLine("错误：" + e.ToString()); });
             l = KTools.Serializer.XMLSerializer.DeSerialize<List<string>>("xml.txt", (e) => { Console.WriteLine("错误：" + e.ToString()); });
             Console.WriteLine("XML序列化：" + l[0]);
