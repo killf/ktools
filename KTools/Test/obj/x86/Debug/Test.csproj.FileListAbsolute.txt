@@ -1,7 +1,0 @@
-D:\项目\ktools\KTools\Test\bin\Debug\Test.exe
-D:\项目\ktools\KTools\Test\bin\Debug\Test.pdb
-D:\项目\ktools\KTools\Test\bin\Debug\KTools.dll
-D:\项目\ktools\KTools\Test\bin\Debug\KTools.pdb
-D:\项目\ktools\KTools\Test\obj\x86\Debug\Test.csprojResolveAssemblyReference.cache
-D:\项目\ktools\KTools\Test\obj\x86\Debug\Test.exe
-D:\项目\ktools\KTools\Test\obj\x86\Debug\Test.pdb
