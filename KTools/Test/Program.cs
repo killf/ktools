@@ -19,8 +19,11 @@ namespace Test
             //KTools.Serializer.SoapSerializer.Serialize<string>(str, "d:/2.dat", (e) => { Console.WriteLine("错误："+e.ToString()); });
             //var l = KTools.Serializer.SoapSerializer.DeSerialize<string>("d:/2.dat");
 
-            KTools.Serializer.BinarySerializer.Serialize<List<string>>(ls, "d:/3.dat");
-            var l= KTools.Serializer.BinarySerializer.DeSerialize<List<string>>("d:/3.dat");
+            //KTools.Serializer.BinarySerializer.Serialize<List<string>>(ls, "d:/3.dat");
+            //var l= KTools.Serializer.BinarySerializer.DeSerialize<List<string>>("d:/3.dat");
+
+            KTools.Serializer.JsonSerializer.Serialize<List<string>>(ls, "d:/4.txt");
+            var l = KTools.Serializer.JsonSerializer.DeSerialize<List<string>>("d:/4.txt");
 
             Console.WriteLine(l[0]);
             Console.ReadLine();
